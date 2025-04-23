@@ -1,5 +1,5 @@
-🔥 Nội dung trang web bây giờ là "nội dung giả"
-🔥 Nhớhớ đọc kĩ note từng trang js, css và sửa khi cần
+🔥 Nội dung trang web hiện tại là nội dung giả
+🔥 Nhớ đọc kĩ note từng trang js, css và sửa khi cần
 ⚠️ = CHƯA CẦN LẮM/KHÔNG ƯU TIÊN
 
 vinahouse/
