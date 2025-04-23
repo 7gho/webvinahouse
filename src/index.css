@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Đặt font mặc định */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #22201F; /* Màu nền mặc định */
+  color: #FFFFFF; /* Màu chữ mặc định */
+  overflow-x: hidden; /* Tránh scroll ngang không mong muốn */
+}
+
+/* Có thể thêm các reset CSS khác ở đây */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit; /* Link không đổi màu */
+  text-decoration: none; /* Bỏ gạch chân link */
+}
+
+/* Placeholder cho font light khi cần */
+.font-light {
+    font-weight: 300;
+}
+
+/* Placeholder cho font regular khi cần (thường là mặc định) */
+.font-regular {
+    font-weight: 400;
+}
+
+/* Placeholder cho chữ uppercase */
+.text-uppercase {
+    text-transform: uppercase;
+}

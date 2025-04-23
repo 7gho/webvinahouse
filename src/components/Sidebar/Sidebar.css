@@ -1,0 +1,123 @@
+/* Thanh trigger */
+.sidebar-trigger {
+    position: fixed; /* Hoặc absolute tùy vào container cha */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px; /* Rộng hơn thanh 2px để dễ click */
+    height: 60px;
+    background-color: #333; /* Màu nền dễ thấy */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001; /* Nằm trên nội dung nhưng dưới navbar nếu cần */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: left 0.3s ease;
+    font-size: 18px;
+    border-left: 2px solid black; /* Thanh đen 2px */
+  }
+  
+  .sidebar-trigger.open {
+     left: 250px; /* Khi sidebar mở, đẩy trigger ra */
+  }
+  
+  
+  /* Sidebar chính */
+  .sidebar {
+    width: 250px;
+    background-color: #1c1c1c; /* Màu nền sidebar */
+    height: 100vh; /* Chiều cao đầy màn hình */
+    position: fixed; /* Cố định */
+    top: 0;
+    left: -250px; /* Ẩn ban đầu */
+    padding-top: 120px; /* Khoảng trống cho navbar */
+    padding-left: 15px; /* Padding nội dung */
+    padding-right: 15px;
+    transition: left 0.3s ease;
+    z-index: 999; /* Dưới navbar và trigger */
+    overflow-y: auto; /* Scroll nếu nội dung dài */
+    border-right: 1px solid #444;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Hiện ra khi mở */
+  }
+  
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sidebar Item */
+   .sidebar-item-container {
+       margin-bottom: 40px; /* Khoảng cách giữa các item */
+   }
+  
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400; /* Inter Regular */
+    margin-bottom: 5px; /* Khoảng cách nhỏ trước dropdown */
+    cursor: pointer; /* Cho item có dropdown */
+  }
+  
+  .sidebar-item:hover {
+    color: #ccc; /* Hiệu ứng hover */
+  }
+  
+  .sidebar-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px; /* Khoảng cách giữa icon và text */
+    object-fit: contain;
+  }
+  
+   .dropdown-arrow {
+      margin-left: auto; /* Đẩy mũi tên về cuối */
+      font-size: 12px;
+      transition: transform 0.2s ease;
+   }
+   .dropdown-arrow.open {
+      transform: rotate(180deg); /* Xoay mũi tên khi mở */
+   }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    margin-left: 55px; /* Thụt lề = width icon + margin-right */
+    margin-top: 10px; /* Khoảng cách với item cha */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Khoảng cách giữa các link dropdown */
+  }
+  
+  .dropdown-item {
+    color: #FFFFFF;
+    font-size: 16px;
+    /* font-weight: 300; Inter Light class đã được thêm */
+    text-decoration: none;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+  .dropdown-item.font-light {
+      font-weight: 300; /* Đảm bảo áp dụng font light */
+  }
+  
+  .dropdown-item:hover {
+    color: #ccc;
+  }
+  
+  /* Đường kẻ ngang */
+  .sidebar-divider {
+    border: none;
+    height: 1px;
+    background-color: #000000; /* Màu đen */
+    margin: 20px 0; /* Khoảng cách trên dưới */
+    margin-bottom: 40px; /* Đảm bảo khoảng cách 40px tới item dưới */
+  }
