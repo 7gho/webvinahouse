@@ -7,8 +7,8 @@ import HomePage from './pages/HomePage/HomePage';
 // import LoginPage from './pages/LoginPage';
 // import RegisterPage from './pages/RegisterPage';
 // import UserProfilePage from './pages/UserProfilePage';
-// import FavoritesPage from './pages/FavoritesPage';
-// import MyPlaylistPage from './pages/MyPlaylistPage';
+import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
+import MyPlaylistPage from './pages/MyPlaylistPage/MyPlaylistPage';
 import PlaylistListPage from './pages/PlaylistListPage/PlaylistListPage';
 import DJListPage from './pages/DJListPage/DJListPage';
 import GenrePage from './pages/GenrePage/GenrePage';
@@ -23,6 +23,8 @@ function App() {
         {/* Sử dụng Layout component cho các route cần Navbar, Sidebar, Footer */}
         <Route path="/" element={<Layout />}>
           {/* Trang chủ */}
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/my-playlist" element={<MyPlaylistPage />} />
           <Route index element={<HomePage />} />
           <Route path="/playlists" element={<PlaylistListPage />} />
           <Route path="/djs" element={<DJListPage />} />
@@ -34,8 +36,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/user/profile" element={<UserProfilePage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/my-playlist" element={<MyPlaylistPage />} />
+          
+          
           
           
           
